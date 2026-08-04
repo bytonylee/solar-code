@@ -1,7 +1,7 @@
 # sol
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
-![npm](https://img.shields.io/npm/v/solarcode?logo=npm&logoColor=white)
+![npm](https://img.shields.io/npm/v/%40bytonylee%2Fsol?logo=npm&logoColor=white)
 ![Runtime](https://img.shields.io/badge/runtime-standard%20library-2e7d6d)
 ![Status](https://img.shields.io/badge/status-experimental-c27d35)
 
@@ -79,14 +79,14 @@ method provides the same `sol` command.
 After the package is published:
 
 ```bash
-npm install --global solarcode
+npm install --global @bytonylee/sol
 sol --help
 ```
 
 ### Bun
 
 ```bash
-bun add --global solarcode
+bun add --global @bytonylee/sol
 sol --help
 ```
 
