@@ -1100,18 +1100,13 @@ def _right_align(line: str, width: int) -> str:
 
 
 def _activity_rows(app: App, width: int) -> list[str]:
-    """Render transient progress or approval state in the conversation body."""
+    """Render approval details in the conversation body."""
     body_w = max(10, width - 4)
     if app.approval is not None:
         desc = app.approval[0]
-        message = f"권한 요청: {desc} · 실행할까요? [y/N]"
+        message = f"[승인] {desc} · 실행할까요? [y/N]"
         return [fg(WARN) + "  ! " + line + RESET
                 for line in wrap_text(message, body_w)]
-    if app.busy:
-        spin = SPINNER[app.tick % len(SPINNER)]
-        spinner = (fg(LAVENDER) + SPINNER_BASELINE_DOWN + spin
-                   + SPINNER_BASELINE_NORMAL + RESET)
-        return ["  " + spinner + DIM + " " + app.phase + RESET]
     return []
 
 
@@ -1210,8 +1205,13 @@ def render_frame(app: App, width: int, height: int) -> str:
             f"{mode} · [enter] Keychain 저장 · esc 취소 · 값은 표시/기록하지 않음",
             mode)
         footer = DIM + " " + text + RESET
-    elif app.approval is not None or app.busy:
+    elif app.approval is not None:
         footer = DIM + " " + mode + RESET
+    elif app.busy:
+        spin = SPINNER[app.tick % len(SPINNER)]
+        spinner = (fg(LAVENDER) + SPINNER_BASELINE_DOWN + spin
+                   + SPINNER_BASELINE_NORMAL + RESET)
+        footer = spinner + DIM + " " + mode + RESET
     elif popup:
         text = _fit_footer_text(w, f"{mode} · {COMPLETION_HINTS.strip()}", mode)
         footer = DIM + " " + text + RESET
