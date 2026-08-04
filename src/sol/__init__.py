@@ -28,7 +28,7 @@ from .vcs import write_commit_message, write_issue, write_pr
 from .workspace import Workspace, WorkspaceFactory
 from .worktree import Worktree, WorktreeError
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 __all__ = ["AUTO", "RECORD", "REPLAY", "ROLES", "Agent", "Block", "CacheLedger",
            "Cassette", "CassetteMiss", "Chain", "Checkpoint", "CheckpointLog",
