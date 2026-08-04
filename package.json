@@ -1,5 +1,5 @@
 {
-  "name": "solarcode",
+  "name": "@bytonylee/sol",
   "version": "0.0.2",
   "description": "A Python coding-agent harness for Upstage Solar models.",
   "type": "commonjs",
