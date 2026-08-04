@@ -1,0 +1,63 @@
+# Local credentials and certificates
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage/
+.venv/
+venv/
+*.egg-info/
+
+# Frontend dependencies and build output
+**/node_modules/
+**/dist/
+**/build/
+npm-debug.log*
+pnpm-debug.log*
+
+# Local runtime and generated records
+**/.sol/*.jsonl
+**/.sol/notes/
+out/
+
+# Development-only directories
+src/tests/
+experiments/
+src/css/
+src/js/
+
+# Project notes and examples
+.sol/skills/
+.sol/notes/
+AGENTS.md
+IDENTITY.md
+PLAN-*.md
+SVP.md
+TESTING.md
+VERIFICATION-LOG.md
+docs/MODEL-SETTINGS.md
+docs/REPOSITORY_METADATA.md
+docs/releases/
+docs/norms/
+SPEC-context-management.md
+SPEC-keyless-web.md
+demo-insurance/
+diagnose_solar.sh
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

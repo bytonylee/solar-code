@@ -1,0 +1,43 @@
+{
+  "name": "@bytonylee/solar-code",
+  "version": "0.0.1",
+  "description": "A Python coding-agent harness for Upstage Solar models.",
+  "type": "commonjs",
+  "bin": {
+    "sol": "bin/sol.js"
+  },
+  "files": [
+    "bin/sol",
+    "bin/sol.js",
+    "src/sol/*.py",
+    "install.sh",
+    ".env.example",
+    "README.md",
+    "README.ko.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "solar",
+    "upstage",
+    "coding-agent",
+    "cli",
+    "tui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bytonylee/solar-code.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bytonylee/solar-code/issues"
+  },
+  "homepage": "https://github.com/bytonylee/solar-code",
+  "scripts": {
+    "check": "node --check bin/sol.js",
+    "pack:check": "npm pack --dry-run"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
